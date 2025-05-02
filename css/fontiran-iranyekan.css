@@ -1,0 +1,55 @@
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: bold;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekan/iranyekanwebbold.woff') format('woff');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 100;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekan/iranyekanwebthin.woff') format('woff');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 300;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekan/iranyekanweblight.woff') format('woff');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: normal;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekan/iranyekanwebregular.woff') format('woff');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 500;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekan/iranyekanwebmedium.woff') format('woff');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 800;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekan/iranyekanwebextrabold.woff') format('woff');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 900;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekan/iranyekanwebblack.woff') format('woff');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 950;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekan/iranyekanwebextrablack.woff') format('woff');
+}

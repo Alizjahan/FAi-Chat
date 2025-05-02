@@ -1,0 +1,38 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "images/icon-128.png",
+         "16": "images/icon-16.png",
+         "32": "images/icon-32.png",
+         "48": "images/icon-48.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "FAi-Chat (Persian RTL)"
+   },
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "css/vazir.css", "css/snapp.css", "css/fontiran-iranyekan.css", "style.css" ],
+      "js": [ "js/myJquery-3.7.1.js", "js/content.js" ],
+      "matches": [ "https://chat.openai.com/*", "https://chatgpt.com/*", "https://github.com/*", "https://claude.ai/*", "https://perplexity.ai/*", "https://www.perplexity.ai/*", "https://duckduckgo.com/*", "https://aistudio.google.com/*", "https://chat.deepseek.com/*", "https://you.com/*", "https://chat.qwenlm.ai/*", "https://chat.qwen.ai/*", "https://poe.com/*", "https://monica.im/*", "https://gemini.google.com/*", "https://grok.com/*", "https://chat.mistral.ai/*", "https://manus.im/*", "https://www.kimi.com/*", "https://www.blackbox.ai/*", "https://notebooklm.google.com/*", "https://chat.z.ai/*", "https://lmarena.ai/*", "https://openrouter.ai/*", "https://agent.minimax.io/*", "https://jules.google.com/*", "https://1min.ai/*", "https://app.1min.ai/*", "https://lovable.dev/*", "https://www.lovable.dev/*", "https://ernie.baidu.com/*", "https://www.ernie.baidu.com/*", "https://app.writesonic.com/*", "https://www.app.writesonic.com/*", "https://gamma.app/*", "https://www.gamma.app/*", "https://genspark.ai/*", "https://www.genspark.ai/*" ]
+   } ],
+   "description": "FAi-Chat: راست‌چین هوشمند و فونت فارسی برای وب‌سایت‌های هوش مصنوعی",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png"
+   },
+   "manifest_version": 3,
+   "name": "FAi-Chat",
+   "optional_host_permissions": [ "<all_urls>" ],
+   "optional_permissions": [ "tabs", "scripting" ],
+   "permissions": [ "storage" ],
+   "short_name": "FAi-Chat",
+   "version": "1.0.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "images/*", "fonts/*" ]
+   } ]
+}

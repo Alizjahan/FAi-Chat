@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'snapp';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/snapp/SnappWeb2.0-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Snapp';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/snapp/SnappWeb2.0-Regular.woff') format('woff');
+}

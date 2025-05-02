@@ -1,0 +1,42 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.directory
+
+# IDE and Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Package Managers and Builds
+node_modules/
+dist/
+build/
+package-lock.json
+
+# Extension Archives & Temporary Artifacts
+*.crx
+*.pem
+*.zip
+*.tar.gz
+
+# Environment and Logs
+.env
+.env.local
+*.log
+npm-debug.log*
+
+# Scratch, Temporary & Plan Files
+scratch/
+check_content.js
+check_snippet.js
+patch_content.js
+patch_bg.js
+upgrade_line_height.js
+remove_line_height.js
+clean_bg.js
+IMPLEMENTATION_PLAN.md

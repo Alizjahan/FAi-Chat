@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'vazir';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/vazir/variable/Vazirmatn[wght].woff2') format('woff2-variations'),
+	     url('chrome-extension://__MSG_@@extension_id__/fonts/vazir/variable/Vazirmatn[wght].woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Vazirmatn';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/vazir/variable/Vazirmatn[wght].woff2') format('woff2-variations'),
+	     url('chrome-extension://__MSG_@@extension_id__/fonts/vazir/variable/Vazirmatn[wght].woff2') format('woff2');
+}

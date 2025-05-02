@@ -1,0 +1,1057 @@
+:root {
+    --faliz-rtl-font: iranyekan, sans-serif;
+}
+
+.AsRed {
+    background: red !important;
+}
+
+html:not(.faliz-rtl-code-algorithm) .FontSet pre,
+html:not(.faliz-rtl-code-algorithm) .FontSetGPT pre,
+html:not(.faliz-rtl-code-algorithm) .FontSetImportant pre,
+html:not(.faliz-rtl-code-algorithm) .FontSetImportantGPT pre,
+html:not(.faliz-rtl-code-algorithm) .CopilotFontSet pre,
+html:not(.faliz-rtl-code-algorithm) .FontSet code,
+html:not(.faliz-rtl-code-algorithm) .FontSetGPT code,
+html:not(.faliz-rtl-code-algorithm) .FontSetImportant code,
+html:not(.faliz-rtl-code-algorithm) .FontSetImportantGPT code,
+html:not(.faliz-rtl-code-algorithm) .CopilotFontSet code,
+html:not(.faliz-rtl-code-algorithm) .FontSet .cm-content,
+html:not(.faliz-rtl-code-algorithm) .FontSetGPT .cm-content,
+html:not(.faliz-rtl-code-algorithm) .FontSet .cm-line,
+html:not(.faliz-rtl-code-algorithm) .FontSetGPT .cm-line,
+html:not(.faliz-rtl-code-algorithm) .FontSet .md-code-block,
+html:not(.faliz-rtl-code-algorithm) .FontSetGPT .md-code-block,
+html:not(.faliz-rtl-code-algorithm) .FontSet [data-streamdown="code-block"],
+html:not(.faliz-rtl-code-algorithm) .FontSetGPT [data-streamdown="code-block"],
+html:not(.faliz-rtl-code-algorithm) .FontSet [data-language],
+html:not(.faliz-rtl-code-algorithm) .FontSetGPT [data-language],
+html:not(.faliz-rtl-code-algorithm) .FontSet pre [dir],
+html:not(.faliz-rtl-code-algorithm) .FontSetGPT pre [dir],
+html:not(.faliz-rtl-code-algorithm) .FontSet code [dir],
+html:not(.faliz-rtl-code-algorithm) .FontSetGPT code [dir] {
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: isolate;
+}
+
+.FontSet {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+.FontSet p{
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+.FontSet b{
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+
+.FontSet h1{
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+.FontSet h2{
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+.FontSet h3{
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+.FontSet h4{
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+.FontSet li{
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+span.FontSet,
+.FontSet .body-sm,
+[data-sidebar="menu-item"].FontSet span {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+textarea.FontSetImportant{
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+.FontSetImportant2 {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+
+
+.FontSetImportant {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+.chat-input-container textarea.FontSetImportant {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+/*.FontSetImportantGPT , .FontSetImportantGPT p , .FontSetImportantGPT li , .FontSetImportantGPT * {*/
+/*    font-family: var(--faliz-rtl-font, sans-serif) !important;*/
+/*}*/
+
+.FontSetImportantGPT , .FontSetImportantGPT p , .FontSetImportantGPT li  {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+
+.katex {
+    direction: ltr !important;
+}
+
+.FontSetGPT,
+.FontSetGPT * {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+.FontSetGPT .katex,
+.FontSetGPT .katex * {
+    font-family: KaTeX_Main, "Times New Roman", serif !important;
+}
+
+.FontSetGPT pre,
+.FontSetGPT pre *,
+.FontSetGPT code,
+.FontSetGPT code *,
+.FontSetGPT .cm-content,
+.FontSetGPT .cm-content *,
+.FontSetGPT .cm-line,
+.FontSetGPT .cm-line *,
+.FontSetGPT .cm-editor,
+.FontSetGPT .cm-editor *,
+.FontSetGPT .md-code-block,
+.FontSetGPT .md-code-block * {
+    font-family: revert !important;
+}
+
+.FontSetGPT .FontSetCodeBlocksGPT,
+.FontSetGPT .FontSetCodeBlocksGPT *,
+.FontSetCodeBlocksGPT,
+.FontSetCodeBlocksGPT * {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+/*.FontSetImportantGPT .katex  , .FontSetImportantGPT .katex * {*/
+/*    font-family : KaTeX_Main, Times New Roman, serif ;*/
+
+
+/*    !*font-family*!*/
+
+
+
+/*}*/
+
+
+
+
+
+.items-stretch .items-start code, .items-stretch .items-start pre {
+    font-family: Söhne Mono, Monaco, Andale Mono, Ubuntu Mono, monospace !important;
+    direction: ltr !important;
+}
+
+.items-stretch .items-start code.FontSetCodeBlocksGPT,
+.items-stretch .items-start pre.FontSetCodeBlocksGPT,
+.items-stretch .items-start .FontSetCodeBlocksGPT,
+.items-stretch .items-start .FontSetCodeBlocksGPT * {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+.AsOkBtn {
+    background: green !important;
+}
+
+.AsRtl {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.AsLtr {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+textarea.AsRtl {
+    padding-right: 2.75rem;
+}
+
+.AsBox,
+#AsUpdateModal,
+.As-modal-backdrop,
+.As-story-capsule {
+    display: none !important;
+}
+
+.AsBox img {
+    display: initial;
+    margin-right: 3px;
+    margin-top: -3px;
+    margin-left: 6px;
+    height: 22px;
+    width: 22px;
+    border-radius: 0;
+    border: none;
+}
+
+
+.items-center .group.w-full .markdown.prose {
+    width: 100%;
+}
+
+
+.AsSBtn {
+    border: 1px solid;
+    padding: 0px 9px;
+    margin-right: 6px;
+}
+
+.AsSBtn:hover {
+    background: rgb(212 212 212)
+}
+
+.dark .AsSBtn:hover {
+    background: rgb(116 116 116);
+}
+
+.flex.w-full.setRight {
+    align-items: self-start;
+}
+
+.flex.w-full.setRight .absolute.bottom-0.group-hover\/conversation-turn\:block {
+    right: inherit;
+    margin-right: -5.2rem;
+}
+
+
+.AsRtlList  {
+    text-align: right;
+    font-weight: 400;
+    /* font-size: .75rem; */
+
+}
+
+
+
+
+.AsRtlList .absolute.bottom-0.right-0.top-0.items-center {
+    left: 0;
+    right: initial;
+    padding-left: .5rem;
+    padding-right: initial;
+}
+
+
+.AsRtlList .absolute.bottom-0.top-0.items-center.flex {
+    left: 8px;
+    right: inherit;
+}
+
+.AsRtlList .ltr\:right-0:where([dir=ltr],[dir=ltr] *) {
+    left: 8px ;
+}
+
+
+.AsRtlList .from-token-sidebar-surface-secondary {
+    transform: rotate(180deg);
+    left: 0;
+    right: initial;
+}
+
+.AsRtlList .from-token-sidebar-surface-primary {
+    transform: rotate(180deg);
+    left: 0;
+    right: initial;
+}
+
+
+
+
+.hljs-comment {
+    unicode-bidi: embed;
+}
+
+
+
+/*------------------------*/
+
+.AsRtlList_parent {
+    mask-image: none !important;
+}
+
+
+.AsRtlList.relative.grow.overflow-hidden {
+    text-align: right;
+    font-weight: 400;
+    font-size: .75rem;
+
+}
+
+.AsOkList_absolute.absolute {
+    left: 0px;
+    right: inherit;
+    padding-right: inherit;
+    padding-left: .5rem;
+}
+
+
+code.AsSetLtr , pre.AsSetLtr {
+    text-align: left;
+    direction: ltr;
+}
+
+html.faliz-rtl-code-algorithm pre[dir="rtl"],
+html.faliz-rtl-code-algorithm code[dir="rtl"],
+html.faliz-rtl-code-algorithm .cm-content[dir="rtl"],
+html.faliz-rtl-code-algorithm .cm-line[dir="rtl"],
+html.faliz-rtl-code-algorithm .md-code-block[dir="rtl"] {
+    direction: rtl !important;
+    text-align: right !important;
+    unicode-bidi: isolate;
+}
+
+/* Programming comments: marker stays on the left, comment text is RTL. */
+html.faliz-rtl-code-algorithm [data-faliz-rtl-comment="1"],
+html.faliz-rtl-code-algorithm [data-faliz-rtl-comment="mark"] {
+    direction: ltr !important;
+    unicode-bidi: isolate;
+    text-align: left !important;
+    display: inline;
+}
+
+html.faliz-rtl-code-algorithm [data-faliz-rtl-comment="body"] {
+    direction: rtl !important;
+    unicode-bidi: isolate;
+    display: inline;
+    text-align: right;
+}
+
+/* Persian/RTL code boxes: override site monospace on the block and nested spans */
+html.faliz-rtl-code-algorithm code.FontSet,
+html.faliz-rtl-code-algorithm code.FontSet *,
+html.faliz-rtl-code-algorithm pre.FontSet,
+html.faliz-rtl-code-algorithm pre.FontSet *,
+html.faliz-rtl-code-algorithm .cm-content.FontSet,
+html.faliz-rtl-code-algorithm .cm-content.FontSet *,
+html.faliz-rtl-code-algorithm .cm-line.FontSet,
+html.faliz-rtl-code-algorithm .cm-line.FontSet *,
+html.faliz-rtl-code-algorithm .md-code-block.FontSet,
+html.faliz-rtl-code-algorithm .md-code-block.FontSet *,
+html.faliz-rtl-code-algorithm [data-streamdown="code-block"].FontSet,
+html.faliz-rtl-code-algorithm [data-streamdown="code-block"].FontSet *,
+html.faliz-rtl-code-algorithm [data-language].FontSet,
+html.faliz-rtl-code-algorithm [data-language].FontSet * {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+.language-plaintext.FontSet {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+.AsRtl_rowReverse {
+
+    flex-direction: row-reverse;
+
+}
+
+.AsRtl_rowReverse .items-center.justify-start.rounded-xl.p-1.z-10.-mt-1.bg-token-main-surface-primary {
+    right: 0px !important;
+}
+
+.AsRtl_rowReverse .mt-1.flex.gap-3.empty\:hidden.juice\:-ml-3 {
+
+    flex-direction: row-reverse;
+
+}
+
+
+
+
+.FontSet span.katex-display{
+    direction: ltr;
+}
+
+.FontSet .katex{
+    direction: ltr;
+    display: inline-block;
+}
+
+
+.FontSet span.math.math-inline{
+    direction: ltr;
+    /*text-align: left;*/
+    display: inline-block;
+}
+.FontSet .math.math-display {
+    direction: ltr;
+}
+
+/* ------------chatGPT----------------- */
+
+
+ blockquote.AsOkText::after{
+    right: 0;
+    left: initial;
+}
+
+
+.FontSetImportantGPT [dir=rtl] code.hljs,.FontSetImportantGPT  [dir=rtl] code[class*=language-], .FontSetImportantGPT  [dir=rtl] pre[class*=language-],
+.FontSetGPT [dir=rtl] code.hljs, .FontSetGPT [dir=rtl] code[class*=language-], .FontSetGPT [dir=rtl] pre[class*=language-] {
+    text-align: left !important;
+}
+
+
+.AsSetAlgorithm.markdown.streaming-animation h1,
+.AsSetAlgorithm.markdown.streaming-animation h2,
+.AsSetAlgorithm.markdown.streaming-animation h3, 
+.AsSetAlgorithm.markdown.streaming-animation h4, 
+.AsSetAlgorithm.markdown.streaming-animation h5,
+.AsSetAlgorithm.markdown.streaming-animation h6 {
+    width: 100%;
+}
+
+
+/*----------------claud----------------*/
+
+.FontSet .font-claude-message , .FontSet .font-user-message  , .FontSet .ProseMirror {
+    font-family: var(--faliz-rtl-font, sans-serif);
+}
+
+:is(.standard-markdown, .progressive-markdown, #standard-markdown-artifact, #markdown-artifact)[dir="rtl"] :is(p, blockquote, ul, ol, h1, h2, h3, h4, h5, h6):not([dir="ltr"]),
+:is(.standard-markdown, .progressive-markdown, #standard-markdown-artifact, #markdown-artifact)[data-direction="rtl"] :is(p, blockquote, ul, ol, h1, h2, h3, h4, h5, h6):not([dir="ltr"]),
+[dir="rtl"] :is(.standard-markdown, .progressive-markdown, #standard-markdown-artifact, #markdown-artifact) :is(p, blockquote, ul, ol, h1, h2, h3, h4, h5, h6):not([dir="ltr"]),
+:is(.standard-markdown, .progressive-markdown) :is(p, blockquote, ul, ol, h1, h2, h3, h4, h5, h6)[dir="rtl"] {
+    padding-left: calc(var(--spacing) * 8) !important;
+    padding-right: 0 !important;
+}
+
+:is(.standard-markdown, .progressive-markdown, #standard-markdown-artifact, #markdown-artifact)[dir="rtl"] :is(p, blockquote, h1, h2, h3, h4, h5, h6):not([dir="ltr"]),
+:is(.standard-markdown, .progressive-markdown, #standard-markdown-artifact, #markdown-artifact)[data-direction="rtl"] :is(p, blockquote, h1, h2, h3, h4, h5, h6):not([dir="ltr"]),
+[dir="rtl"] :is(.standard-markdown, .progressive-markdown, #standard-markdown-artifact, #markdown-artifact) :is(p, blockquote, h1, h2, h3, h4, h5, h6):not([dir="ltr"]),
+:is(.standard-markdown, .progressive-markdown) :is(p, blockquote, h1, h2, h3, h4, h5, h6)[dir="rtl"] {
+    padding-right: var(--msg-text-inset, .5rem) !important;
+}
+
+
+.AsRtlClaudeUser {
+    align-items: end;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.AsRtlClaudeUser .flex.flex-row.gap-2 {
+    flex-direction: row-reverse;
+} 
+
+
+
+.AsRtlClaudeUser .group.relative.inline-flex.gap-2.break-words.flex-col.pr-6 {
+
+
+    padding-left: 1rem;
+    padding-right: .825rem;
+
+
+}
+
+
+/* .AsRtlClaudeUser span.truncate {
+    direction: rtl !important;
+    text-align: right !important;
+    mask-size: 100% 100% !important;
+    mask-image: linear-gradient(to_left, hsl(var(--always-black)) 78%, transparent 95%) !important;
+}
+
+.AsRtlClaudeUser .group:hover span.truncate,
+.AsRtlClaudeUser .group:focus-within span.truncate {
+    mask-size: 100% 100% !important;
+    mask-image: linear-gradient(to_left, hsl(var(--always-black)) 78%, transparent 95%) !important;
+}
+ */
+
+
+
+
+
+/* 
+.AsRtlClaudeList {
+    direction: rtl;
+    flex-direction: row-reverse;
+} */
+/* 
+.AsRtlClaudeList .absolute.right-0 {
+  
+    left: 0;
+    right: initial;
+} */
+
+.AsRtlClaudeList .whitespace-nowrap {
+ 
+    direction: rtl;
+    text-align: left;
+    font-family: var(--faliz-rtl-font, sans-serif);
+
+}
+
+
+.AsBox.AsBoxClaude {
+    font-size: 15px;
+    font-weight: 200;
+    color: #c7c7c7;
+}
+
+
+
+
+[dir=ltr] .prose :where(table):not(:where([class~=not-prose] *)) {
+    text-align: right !important;
+    direction: ltr !important;
+}
+
+
+[dir=rtl] .prose :where(table):not(:where([class~=not-prose] *)) {
+    text-align: right !important;
+    direction: ltr !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------
+copilot
+*/
+
+
+.CopilotFontSet {
+    font-family: var(--faliz-rtl-font, sans-serif);
+}
+
+.listboxRtlCopilot {
+    flex-direction: row-reverse;
+}
+
+.space-y-3.CopilotFontSet {
+    font-weight: 400;
+    /*color: #fff;*/
+    line-height: 1.8rem;
+}
+
+
+.space-y-3.CopilotFontSet:is([data-theme=dark] *) {
+
+    color: #fff;
+
+}
+
+
+.CopilotFontSet pre {
+    direction: ltr;
+}
+
+
+.AsAlignRtl {
+    text-align: right !important;
+}
+
+.AsBox_copilotBing {
+    transform: scale(0.8);
+    color: #8d8783;
+}
+
+
+.AsBox_copilotBingBlock {
+
+    margin-bottom: -30px;
+    padding-top: 0px;
+
+
+    /*margin-bottom: -25px;*/
+    /*padding-top: 8px;*/
+    font-weight: 100;
+
+}
+
+
+
+.FontSet svg.inline-block.mr-2 {
+    margin-right: .5rem;
+    margin-left: .5rem;
+}
+
+
+/*---------------*/
+
+.AsBoxDuckduckgo a {
+    vertical-align: -webkit-baseline-middle;
+}
+.AsBoxDuckduckgo {
+    color: #888888;
+}
+
+.activateDuckduckgo ol[dir="rtl"] , .activateDuckduckgo ul[dir="rtl"] {
+    padding: 0 30px 0 0 !important;
+}
+
+
+/*----*/
+
+
+.FontSetPerplexity .font-sans {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+.FontSetPerplexity h2 {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+html:not(.faliz-rtl-code-algorithm) .FontSetPerplexity code {
+    direction: ltr !important;
+}
+
+html.faliz-rtl-code-algorithm .FontSetPerplexity code.FontSet,
+html.faliz-rtl-code-algorithm .FontSetPerplexity code.FontSet * {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+.FontSetImportant .font-display {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+
+.AsRtl .font-display {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+.AsBoxPerplexity {
+    grid-column: span 8 / span 8;
+    color: #888888;
+    margin-top: 0px;
+    margin-bottom: -15px;
+    width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 24px 8px 24px;
+    transform: scale(0.7);
+}
+
+
+.AsRtlPerplexity svg.mr-2 {
+
+    margin-left: 0.5rem;
+    margin-right: initial;
+
+}
+
+
+
+/* Convert ml-auto to mr-auto for RTL in AsRtlPerplexity */
+.AsRtlPerplexity .ml-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/*-----------------*/
+
+
+.AsOk.flex-row-reverse .pointer-events-none.relative.flex.h-full {
+    /*position: absolute !important;*/
+    /*right: -20px !important;*/
+    margin-left: 24px;
+}
+
+
+
+
+
+/*----------------*/
+
+
+ms-text-chunk.FontSet,
+ms-cmark-node.FontSet,
+.chat-turn-container.FontSet,
+.turn-container.FontSet {
+    width: 100%;
+}
+
+.FontSet .text-chunk,
+.FontSet .cmark-node {
+    width: 100%;
+}
+
+ms-code-block,
+ms-function-call-chunk,
+.cm-editor {
+    direction: ltr;
+}
+
+.app-prompts footer {
+    position: relative;
+    padding-bottom: 36px !important;
+}
+
+.app-prompts footer .AsBox {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+/*-----------------*/
+
+
+.md-code-block {
+    direction: ltr;
+}
+
+
+/*------you.com----*/
+
+.AlignSet {
+    text-align: start !important;
+}
+
+.code-block {
+    text-align: left;
+    direction: ltr;
+}
+
+textarea#search-input-textarea {
+    padding-right: 11px;
+}
+
+
+
+
+.AsSet .cuudgG {
+    padding-right: 50px !important;
+    margin-top: -4px !important;
+
+}
+
+[dir="rtl"] span._1vwisb38 {
+    text-align: inherit !important;
+}
+
+
+
+/*deep*/
+
+html.faliz-rtl-has-font .ds-markdown h1,
+html.faliz-rtl-has-font .ds-markdown h2,
+html.faliz-rtl-has-font .ds-markdown h3,
+html.faliz-rtl-has-font .ds-markdown h4 {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+._546d736.AsOkRList ._254829d  {
+
+    left: 0;
+    right: inherit;
+}
+._546d736.AsOkRList ._254829d  {
+    transform: rotate(180deg);
+}
+
+
+
+._27c9245.FontSet textarea {
+    padding-right: 10px;
+}
+
+
+
+
+/*poe*/
+
+.MarkdownCodeBlock_container__nRn2j {
+    direction: ltr;
+}
+
+
+.Message_messageTextContainer__w64Sc.FontSet , .Message_messageTextContainer__w64Sc.FontSet p , .Message_messageTextContainer__w64Sc.FontSet li {
+    font-weight: 300;
+    line-height: 32px;
+}
+
+
+/*monica*/
+ .input-wrapper--oYXfL {
+    max-height: 250px;
+}
+.AsBox.AsBoxMonica {
+    margin-bottom: 10px;
+}
+
+
+/*Gemini*/
+
+.AsBoxGemini a {
+    vertical-align: -webkit-baseline-middle;
+}
+.AsBoxGemini {
+    color: #888888;
+}
+
+[dir="rtl"] user-query {
+
+    direction: ltr;
+}
+
+
+
+
+
+pending-request {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+/*grok*/
+.AsBoxgrok {
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+
+
+
+/*qwenlm*/
+
+/* ۱. اصلاح بخش اول برای جابجایی دکمه منو یا وب در حالت راست‌چین */
+.chat-item-drag:has([dir="rtl"]) .chat-item-drag-web {
+    right: auto;
+    left: 0;
+    /* padding: 4px 20px 4px 0px; */
+}
+
+/* ۲. اصلاح بخش دوم برای پدینگ متن در حالت هوور */
+.chat-item-drag:hover [dir="rtl"] .chat-item-drag-link-content-tip-text {
+    padding-right: 10px;
+    padding-left: 16px;
+}
+
+.AsBoxqwenlm {
+    margin-bottom: 22px;
+    margin-top: -22px;
+    font-size: 14px;
+}
+
+
+.max-w-6xl .AsBoxqwenlm {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+/*-----Mistral-------*/
+
+
+.AsMistral {
+    color: rgb(136, 136, 136);
+    transform: scale(0.8);
+    margin-top: -7px;
+    margin-bottom: 6px;
+}
+
+
+
+/*-----Kimi -------*/
+
+.AsKimi {
+    color: rgb(136, 136, 136);
+    margin-bottom: -4px;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+
+
+.AsKimi a {
+    vertical-align: middle;
+}
+
+
+
+/* -----manus----- */
+
+.overflow-y-auto.pl-4.pr-2.AsOk {
+    padding-right: 1rem;
+}
+
+
+
+/* Copyright */
+
+.AsBoxB {
+    margin: auto;
+    color: #888888;
+    transform: scale(0.8);
+
+}
+
+.AsBoxB a {
+    vertical-align: -webkit-baseline-middle;
+}
+
+/* Custom Blue Scrollbar Styles */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+/* ----------notebooklm----- */
+/* 
+.FontSet .ng-star-inserted {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+} */
+
+
+.FontSetNodeName {
+    font-size: 16px !important;
+}
+
+.AsOkNotebooklm[dir="rtl"] .ng-star-inserted:not(
+    [class*="icon"],
+    [class*="Icon"],
+    [class*="symbol"],
+    [class*="Symbol"],
+    .google-symbols,
+    .lumi-symbols,
+    .mat-ligature-font
+) {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+}
+
+
+/* --------OpenRouter------------- */
+
+.FontOpenRouter ol.pl-8[dir="rtl"] {
+
+    padding-left: initial;
+    padding-right: 2rem;
+}
+
+/* Preserve browser spell-check styling - ensure only underline is red, not entire text */
+/* This prevents the extension from interfering with native browser spell-check styling */
+::spelling-error,
+::grammar-error {
+    color: inherit !important;
+    background-color: transparent !important;
+    text-decoration: underline wavy !important;
+    text-decoration-color: rgb(255, 0, 0) !important;
+    text-decoration-thickness: 1px !important;
+    /* background-color: red !important; */
+}
+
+/* Ensure spell-check works correctly in input and textarea elements */
+input::spelling-error,
+textarea::spelling-error,
+[contenteditable]::spelling-error,
+input::grammar-error,
+textarea::grammar-error,
+[contenteditable]::grammar-error {
+    color: inherit !important;
+    background-color: transparent !important;
+    text-decoration: underline wavy !important;
+    text-decoration-color: rgb(255, 0, 0) !important;
+    text-decoration-thickness: 1px !important;
+    /* background-color: red !important; */
+}
+
+/* Preserve spell-check for elements with extension classes */
+.FontSet::spelling-error,
+.FontSet::grammar-error,
+.FontSetImportant::spelling-error,
+.FontSetImportant::grammar-error,
+textarea.FontSetImportant::spelling-error,
+textarea.FontSetImportant::grammar-error {
+    color: inherit !important;
+    background-color: transparent !important;
+    text-decoration: underline wavy !important;
+    text-decoration-color: rgb(255, 0, 0) !important;
+    text-decoration-thickness: 1px !important;
+    /* background-color: red !important; */
+}
+
+/* Prevent any CSS from setting text color to red for spell-check errors */
+input[spellcheck="true"],
+textarea[spellcheck="true"],
+[contenteditable][spellcheck="true"] {
+    /* background-color: red !important; */
+    color: inherit !important;
+}
+
+input[spellcheck="true"]::spelling-error,
+textarea[spellcheck="true"]::spelling-error,
+[contenteditable][spellcheck="true"]::spelling-error {
+    color: inherit !important;
+    /* background-color: red !important; */
+}
+   
+/*--------Vivado-------------*/
+
+.FontSetVivadoInput {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+    font-size: 10px;
+
+}
+
+
+.FontSetVivado {
+    font-family: var(--faliz-rtl-font, sans-serif) !important;
+    font-size: 10px !important;
+    line-height: 30px !important;
+}
+
+
+/*--------------- atxp -----------------*/
+
+
+
+.rtl-algorithm-active [role="contentinfo"] span {
+    display: none;
+}
+
+
+
+
+
+/*--------Consensus-------------*/
+
+
+.rtl-algorithm-active .AsOkCON [dir="rtl"].markdown-ul li:before {
+    content: "•";
+    top: calc(var(--spacing) * 0);
+    right: -9px;
+    left: initial;
+}

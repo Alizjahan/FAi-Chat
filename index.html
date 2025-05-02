@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="utf-8">
+  <title>FAi-Chat - راست‌چین چت‌بات هوش مصنوعی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/vazir.css">
+  <link rel="stylesheet" href="css/snapp.css">
+  <link rel="stylesheet" href="css/fontiran-iranyekan.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body data-theme="dark">
+  <div class="popup-container">
+    <!-- Top Header Bar -->
+    <header class="popup-header">
+      <!-- Left Brand: Logo + FAi-Chat + 'راست‌چین ایجنت هوش مصنوعی' -->
+      <div class="brand">
+        <img src="images/icon-32.png" alt="لوگو" class="brand-icon">
+        <div class="brand-text">
+          <h1 class="title">FAi-Chat</h1>
+          <span class="subtitle">راست‌چین چت‌بات هوش مصنوعی</span>
+        </div>
+      </div>
+
+      <!-- Right Actions: Theme Icon + Gear Icon -->
+      <div class="header-actions-right">
+        <button type="button" class="icon-btn theme-cycle-btn" id="themeCycleBtn" title="تغییر تم (روشن / تاریک / آنتی‌گرویتی)">
+          <!-- SVG rendered dynamically by popup.js -->
+        </button>
+
+        <button type="button" class="icon-btn header-gear-btn" id="openSettingsDrawerBtn" title="تنظیمات پیشرفته">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Master Activation Banner Row -->
+    <div class="activation-banner">
+      <div class="activation-label-wrap">
+        <span class="activation-title">فعال‌سازی راست‌چین</span>
+        <span id="globalToggleStateText" class="badge-status-pill badge-status-on">روشن</span>
+      </div>
+      <label class="switch" title="فعال‌سازی / غیرفعال‌سازی کلی">
+        <input type="checkbox" id="globalEnableToggle" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <!-- Navigation Header Bar (Single main tab banner) -->
+    <div class="main-tab-bar">
+      <div class="main-tab-item active">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        <span>اصلی و سرویس‌ها</span>
+      </div>
+    </div>
+
+    <!-- Backdrop Overlay for Side Drawer -->
+    <div id="drawerBackdrop" class="drawer-backdrop"></div>
+
+    <!-- Side Settings Drawer (Slides out from left) -->
+    <aside id="settingsDrawer" class="settings-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+          <span>الگوریتم تشخیص جهت متن</span>
+        </div>
+        <button type="button" class="drawer-close-btn" id="closeSettingsDrawerBtn" title="بستن تنظیمات">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="drawer-body custom-scrollbar">
+        <div class="form-group">
+          <div class="form-label-row">
+            <label for="algorithmSelect">شیوه آنالیز جملات و پیام‌ها:</label>
+            <span class="badge badge-accent">موتور هوشمند</span>
+          </div>
+          <select id="algorithmSelect" class="select-input">
+            <option value="advanced_full" selected>تحلیل پیشرفته یکپارچه (توصیه‌شده)</option>
+            <option value="advanced_section">تحلیل پیشرفته بخش‌ها</option>
+            <option value="first_word">تشخیص بر مبنای واژه آغازین</option>
+          </select>
+          <span class="help-text">کل پیام پردازش شده و برای چت‌های طولانی و متن‌های ترکیبی فارسی و انگلیسی بهینه‌ترین دقت را ارائه می‌دهد.</span>
+        </div>
+
+        <div class="setting-toggle-row">
+          <div class="toggle-info">
+            <span class="toggle-title">برعکس کردن فلش‌ها در متن راست‌چین</span>
+            <span class="badge badge-muted">آزمایشی</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="flipArrowsToggle" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="setting-toggle-row">
+          <div class="toggle-info">
+            <span class="toggle-title">اعمال روی باکس کدها (Markdown)</span>
+            <span class="badge badge-muted">آزمایشی</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="applyToCodeToggle" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="drawer-info-card">
+          <div class="drawer-info-header">
+            <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <span>راهنمای عملکرد</span>
+          </div>
+          <p class="drawer-info-text">
+            افزونه FAi-Chat تغییرات پیام‌های چت را به سرعت تشخیص داده و بدون تداخل در بلوک‌های کد یا فرمول‌ها، جهت متن را هماهنگ می‌سازد.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="popup-content">
+      <div class="content-view" id="mainContentView">
+        <!-- Section: Font Settings -->
+        <section class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 7V4h16v3M9 20h6M12 4v16"/>
+              </svg>
+              <span>تنظیمات قلم (فونت)</span>
+            </div>
+            <span class="badge badge-accent">قلم فعال</span>
+          </div>
+
+          <div class="card-body">
+            <div class="form-group">
+              <label for="fontSelect">فونت:</label>
+              <select id="fontSelect" class="select-input">
+                <option value="vazir" selected>وزیرمتن (پیش‌فرض)</option>
+                <option value="snapp">اسنپ (Snapp)</option>
+                <option value="custom_system">فونت دلخواه از سیستم...</option>
+              </select>
+            </div>
+
+            <!-- Custom Font Container (Hidden by default) -->
+            <div id="customFontGroup" class="form-group custom-font-group" style="display: none;">
+              <div id="systemFontSelectWrapper" style="display: none; margin-bottom: 8px;">
+                <label for="systemFontSelect">قلم‌های شناسایی‌شده در سیستم:</label>
+                <select id="systemFontSelect" class="select-input">
+                  <option value="">در حال دریافت لیست قلم‌ها...</option>
+                </select>
+              </div>
+              <div id="manualFontInputWrapper" class="manual-input-wrapper">
+                <label for="customFontInput">یا نام فونت نصب‌شده را تایپ کنید:</label>
+                <div class="input-with-button">
+                  <input type="text" id="customFontInput" class="text-input" placeholder="مثلاً: Tahoma یا B Nazanin">
+                  <button type="button" id="applyCustomFontBtn" class="btn btn-primary">ثبت</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Typography Controls: Font Size -->
+            <div class="typography-sliders-wrap">
+              <!-- Font Size Slider Row -->
+              <div class="slider-control-row">
+                <button type="button" class="btn-reset-slider" id="resetFontSizeBtn" title="بازنشانی اندازه فونت به حالت پیش‌فرض (16px)">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                    <path d="M3 3v5h5"/>
+                  </svg>
+                </button>
+                <div class="slider-track-wrap">
+                  <input type="range" id="fontScaleSlider" min="12" max="24" step="1" value="16" class="range-slider">
+                </div>
+                <div class="slider-label-pill-wrap">
+                  <label for="fontScaleSlider" class="slider-label-text">اندازه فونت:</label>
+                  <span id="fontScaleValue" class="badge-slider-pill">16px</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Supported Sites -->
+        <section class="card">
+          <div class="card-header search-header">
+            <div class="card-title">
+              <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span>سرویس‌های هوش مصنوعی</span>
+            </div>
+            <span id="activeSitesCount" class="badge count-badge">فعال: ۲۸ / ۵۴</span>
+          </div>
+
+          <div class="card-body">
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input type="text" id="siteSearchInput" class="text-input search-input" placeholder="جستجوی سرویس (مثلاً ChatGPT, Claude)...">
+            </div>
+
+            <div id="sitesList" class="sites-list custom-scrollbar">
+              <!-- Rendered dynamically by popup.js -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="popup-footer">
+      <span class="developer-credit" dir="ltr">Developed with ❤️ by <a href="https://github.com/Alizjahan" target="_blank" rel="noopener noreferrer" class="dev-link" title="گیت‌هاب علیرضا جهانبخش"><strong class="dev-name">Aliz</strong></a></span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

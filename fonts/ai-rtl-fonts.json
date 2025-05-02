@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "id": "faliz-rtl",
+    "name": "FAliz RTL",
+    "nameFa": "راست‌چین هوش مصنوعی"
+  },
+  "defaultFont": "vazir",
+  "fonts": [
+    {
+      "id": "vazir",
+      "title": "وزیرمتن (پیش‌فرض)",
+      "family": "Vazirmatn",
+      "version": "33.003",
+      "license": "OFL-1.1",
+      "source": "https://github.com/rastikerdar/vazirmatn",
+      "selectable": true,
+      "files": [
+        {
+          "path": "vazir/variable/Vazirmatn[wght].woff2",
+          "weight": "100 900",
+          "sha256": "4e3fa217d38fdafc1fea4414ceb58ca5e662cf0ab5fa735a8c8c20e8b42cad92"
+        }
+      ]
+    },
+    {
+      "id": "snapp",
+      "title": "اسنپ (Snapp)",
+      "family": "Snapp",
+      "version": "2.0",
+      "license": "Custom",
+      "selectable": true,
+      "files": [
+        {
+          "path": "snapp/SnappWeb2.0-Regular.woff",
+          "weight": "normal",
+          "sha256": "8a501efe9cecb3c27e75aa81b1d5adbe2462d9b9c119256221dbdbb0e2bbb62b"
+        }
+      ]
+    }
+  ]
+}
