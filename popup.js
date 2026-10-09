@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- * FAi-Chat-bot-RTL-Persian-Arabic - Smart RTL & Multilingual Assistant
+ * FAi-Chatbot-RTL-Persian-Arabic - Smart RTL & Multilingual Assistant
  * Architecture & Core Engine authored by Aliz
  * All Rights Reserved © 2026 Aliz
  * ============================================================================
