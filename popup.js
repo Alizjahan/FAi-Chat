@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- * FAi-Chat - Persian & RTL Smart Assistant for AI Chatbots
+ * FAi-Chat-bot-RTL-Persian-Arabic - Smart RTL & Multilingual Assistant
  * Architecture & Core Engine authored by Aliz
  * All Rights Reserved © 2026 Aliz
  * ============================================================================
@@ -63,8 +63,165 @@ const ALIZ_SUPPORTED_PLATFORMS = [
   { key: 'zerve', name: 'زرو (Zerve.ai)', domain: 'zerve.ai', icon: 'zerve.png' }
 ];
 
+const ALIZ_I18N = {
+  fa: {
+    langCode: 'FA',
+    dir: 'rtl',
+    htmlLang: 'fa',
+    langBtnTitle: 'تغییر زبان (فارسی / العربية / English)',
+    themeBtnTitle: (themeName) => `تم فعلی: ${themeName} (برای تغییر کلیک کنید)`,
+    gearBtnTitle: 'تنظیمات پیشرفته',
+    subtitle: 'راست‌چین چت‌بات هوش مصنوعی',
+    activationTitle: 'فعال‌سازی راست‌چین',
+    statusOn: 'روشن',
+    statusOff: 'خاموش',
+    mainTab: 'اصلی و سرویس‌ها',
+    drawerTitle: 'الگوریتم تشخیص جهت متن',
+    drawerCloseTitle: 'بستن تنظیمات',
+    algoLabel: 'شیوه آنالیز جملات و پیام‌ها:',
+    badgeSmart: 'موتور هوشمند',
+    algoOptions: {
+      advanced_full: 'تحلیل پیشرفته یکپارچه (توصیه‌شده)',
+      advanced_section: 'تحلیل پیشرفته بخش‌ها',
+      first_word: 'تشخیص بر مبنای واژه آغازین'
+    },
+    algoHelp: 'کل پیام پردازش شده و برای چت‌های طولانی و متن‌های ترکیبی فارسی و انگلیسی بهینه‌ترین دقت را ارائه می‌دهد.',
+    flipArrowsTitle: 'برعکس کردن فلش‌ها در متن راست‌چین',
+    applyToCodeTitle: 'اعمال روی باکس کدها (Markdown)',
+    badgeBeta: 'آزمایشی',
+    drawerInfoTitle: 'راهنمای عملکرد',
+    drawerInfoText: 'افزونه FAi-Chat تغییرات پیام‌های چت را به سرعت تشخیص داده و بدون تداخل در بلوک‌های کد یا فرمول‌ها، جهت متن را هماهنگ می‌سازد.',
+    fontSectionTitle: 'تنظیمات قلم (فونت)',
+    badgeActiveFont: 'قلم فعال',
+    fontLabel: 'فونت:',
+    fontOptions: {
+      vazir: 'وزیرمتن (پیش‌فرض)',
+      snapp: 'اسنپ (Snapp)',
+      dubai: 'دبی (Dubai)',
+      custom_system: 'فونت دلخواه از سیستم...'
+    },
+    systemFontsLabel: 'قلم‌های شناسایی‌شده در سیستم:',
+    systemFontsDefault: '-- انتخاب قلم از سیستم --',
+    manualFontLabel: 'یا نام فونت نصب‌شده را تایپ کنید:',
+    customFontPlaceholder: 'مثلاً: Tahoma یا B Nazanin',
+    customFontSubmit: 'ثبت',
+    customFontSaved: 'ثبت شد!',
+    fontSizeLabel: 'اندازه فونت:',
+    resetFontSizeTitle: 'بازنشانی اندازه فونت به حالت پیش‌فرض (16px)',
+    servicesSectionTitle: 'سرویس‌های هوش مصنوعی',
+    activeCountBadge: (active, total) => `فعال: ${active} / ${total}`,
+    searchPlaceholder: 'جستجوی سرویس (مثلاً ChatGPT, Claude)...',
+    noSitesFound: 'سایتی با این عنوان یافت نشد.',
+    openSiteTitle: (name) => `باز کردن وب‌سایت ${name}`
+  },
+  ar: {
+    langCode: 'AR',
+    dir: 'rtl',
+    htmlLang: 'ar',
+    langBtnTitle: 'تغيير اللغة (فارسی / العربية / English)',
+    themeBtnTitle: (themeName) => `السمة الحالية: ${themeName} (انقر للتغيير)`,
+    gearBtnTitle: 'الإعدادات المتقدمة',
+    subtitle: 'محاذاة لليمين لروبوتات الذكاء الاصطناعي',
+    activationTitle: 'تفعيل المحاذاة لليمين',
+    statusOn: 'مفعل',
+    statusOff: 'معطل',
+    mainTab: 'الرئيسية والخدمات',
+    drawerTitle: 'خوارزمية تحديد اتجاه النص',
+    drawerCloseTitle: 'إغلاق الإعدادات',
+    algoLabel: 'طريقة تحليل الجمل والرسائل:',
+    badgeSmart: 'محرك ذكي',
+    algoOptions: {
+      advanced_full: 'التحليل المتقدم الشامل (موصى به)',
+      advanced_section: 'التحليل المتقدم للأقسام',
+      first_word: 'الكشف بناءً على الكلمة الأولى'
+    },
+    algoHelp: 'تتم معالجة الرسالة بأكملها لتوفير أعلى دقة للمحادثات الطويلة والنصوص ثنائية اللغة العربية والإنجليزية.',
+    flipArrowsTitle: 'عكس اتجاه الأسهم في النصوص اليمينية',
+    applyToCodeTitle: 'تطبيق على مربعات الأكواد (Markdown)',
+    badgeBeta: 'تجريبي',
+    drawerInfoTitle: 'دليل الاستخدام',
+    drawerInfoText: 'تقوم إضافة FAi-Chat باكتشاف تغييرات الرسائل فورياً وتنسيق اتجاه النص دون المساس بكتل الأكواد أو المعادلات.',
+    fontSectionTitle: 'إعدادات الخط',
+    badgeActiveFont: 'الخط النشط',
+    fontLabel: 'الخط:',
+    fontOptions: {
+      vazir: 'وزیر متن (افتراضي)',
+      snapp: 'سناب (Snapp)',
+      dubai: 'دبي (Dubai)',
+      custom_system: 'خط مخصص من النظام...'
+    },
+    systemFontsLabel: 'الخطوط المكتشفة في النظام:',
+    systemFontsDefault: '-- اختر خطاً من النظام --',
+    manualFontLabel: 'أو اكتب اسم الخط المثبت:',
+    customFontPlaceholder: 'مثال: Tahoma أو Traditional Arabic',
+    customFontSubmit: 'حفظ',
+    customFontSaved: 'تم الحفظ!',
+    fontSizeLabel: 'حجم الخط:',
+    resetFontSizeTitle: 'إعادة تعيين حجم الخط إلى الافتراضي (16 بكسل)',
+    servicesSectionTitle: 'خدمات الذكاء الاصطناعي',
+    activeCountBadge: (active, total) => `مفعل: ${active} / ${total}`,
+    searchPlaceholder: 'بحث عن خدمة (مثل ChatGPT, Claude)...',
+    noSitesFound: 'لم يتم العثور على أي موقع بهذا الاسم.',
+    openSiteTitle: (name) => `فتح موقع ${name}`
+  },
+  en: {
+    langCode: 'EN',
+    dir: 'ltr',
+    htmlLang: 'en',
+    langBtnTitle: 'Change Language (فارسی / العربية / English)',
+    themeBtnTitle: (themeName) => `Current Theme: ${themeName} (Click to change)`,
+    gearBtnTitle: 'Advanced Settings',
+    subtitle: 'RTL AI Chatbot Assistant',
+    activationTitle: 'Enable RTL Layout',
+    statusOn: 'ON',
+    statusOff: 'OFF',
+    mainTab: 'Home & Services',
+    drawerTitle: 'Text Direction Algorithm',
+    drawerCloseTitle: 'Close Settings',
+    algoLabel: 'Sentence Analysis Method:',
+    badgeSmart: 'Smart Engine',
+    algoOptions: {
+      advanced_full: 'Advanced Unified Analysis (Recommended)',
+      advanced_section: 'Advanced Section Analysis',
+      first_word: 'First Word Detection'
+    },
+    algoHelp: 'Full message processing for maximum precision in long conversations and bilingual text.',
+    flipArrowsTitle: 'Flip Directional Arrows in RTL',
+    applyToCodeTitle: 'Apply to Code Blocks (Markdown)',
+    badgeBeta: 'Beta',
+    drawerInfoTitle: 'How It Works',
+    drawerInfoText: 'FAi-Chat smoothly detects incoming streaming responses and aligns direction without altering code blocks or math formulas.',
+    fontSectionTitle: 'Typography & Font Settings',
+    badgeActiveFont: 'Active Font',
+    fontLabel: 'Font:',
+    fontOptions: {
+      vazir: 'Vazirmatn (Default)',
+      snapp: 'Snapp',
+      dubai: 'Dubai',
+      custom_system: 'Custom System Font...'
+    },
+    systemFontsLabel: 'Detected System Fonts:',
+    systemFontsDefault: '-- Select font from system --',
+    manualFontLabel: 'Or type installed font name:',
+    customFontPlaceholder: 'e.g. Segoe UI, Tahoma, Arial',
+    customFontSubmit: 'Apply',
+    customFontSaved: 'Saved!',
+    fontSizeLabel: 'Font Size:',
+    resetFontSizeTitle: 'Reset font size to default (16px)',
+    servicesSectionTitle: 'Supported AI Services',
+    activeCountBadge: (active, total) => `Active: ${active} / ${total}`,
+    searchPlaceholder: 'Search AI service (e.g. ChatGPT, Claude)...',
+    noSitesFound: 'No AI service found matching this keyword.',
+    openSiteTitle: (name) => `Open ${name} website`
+  }
+};
+
+const ALIZ_LANG_CYCLE = ['fa', 'ar', 'en'];
+
 document.addEventListener('DOMContentLoaded', async () => {
   // Aliz DOM References
+  const alizLangSwitchBtn = document.getElementById('langSwitchBtn');
+  const alizLangCodeText = document.getElementById('langCodeText');
   const alizGlobalToggle = document.getElementById('globalEnableToggle');
   const alizToggleStatusLabel = document.getElementById('globalToggleStateText');
   const alizOpenDrawerBtn = document.getElementById('openSettingsDrawerBtn');
@@ -114,6 +271,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   ];
 
   let alizCurrentThemeIndex = 1;
+  let alizCurrentLanguage = 'fa';
 
   function alizApplyThemePalette(themeId) {
     const idx = ALIZ_COLOR_THEMES.findIndex(t => t.id === themeId);
@@ -123,7 +281,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.body.setAttribute('data-theme', currentTheme.id);
     if (alizThemeSwitchBtn) {
       alizThemeSwitchBtn.innerHTML = currentTheme.icon;
-      alizThemeSwitchBtn.title = `تم فعلی: ${currentTheme.title} (برای تغییر کلیک کنید)`;
+      const i18n = ALIZ_I18N[alizCurrentLanguage] || ALIZ_I18N.fa;
+      alizThemeSwitchBtn.title = i18n.themeBtnTitle(currentTheme.title);
     }
   }
 
@@ -160,6 +319,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Storage Ingestion & Initialization
   const alizPlatformKeys = ALIZ_SUPPORTED_PLATFORMS.map(s => s.key);
   const alizRequiredConfigKeys = [
+    'uiLang',
     'uiTheme',
     'globalEnabled',
     'rtlAlgorithmMode',
@@ -174,6 +334,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const alizStoredConfig = await chrome.storage.sync.get(alizRequiredConfigKeys);
 
+  // Set initial language from storage (default 'fa')
+  alizCurrentLanguage = alizStoredConfig.uiLang || 'fa';
+
   // Apply Theme
   alizApplyThemePalette(alizStoredConfig.uiTheme || 'dark');
 
@@ -181,15 +344,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   const alizIsExtensionEnabled = alizStoredConfig.globalEnabled !== false;
   if (alizGlobalToggle) {
     alizGlobalToggle.checked = alizIsExtensionEnabled;
+    const initialI18n = ALIZ_I18N[alizCurrentLanguage] || ALIZ_I18N.fa;
     if (alizToggleStatusLabel) {
-      alizToggleStatusLabel.textContent = alizIsExtensionEnabled ? 'روشن' : 'خاموش';
+      alizToggleStatusLabel.textContent = alizIsExtensionEnabled ? initialI18n.statusOn : initialI18n.statusOff;
       alizToggleStatusLabel.className = `badge-status-pill ${alizIsExtensionEnabled ? 'badge-status-on' : 'badge-status-off'}`;
     }
 
     alizGlobalToggle.addEventListener('change', async (event) => {
       const activeState = event.target.checked;
+      const i18n = ALIZ_I18N[alizCurrentLanguage] || ALIZ_I18N.fa;
       if (alizToggleStatusLabel) {
-        alizToggleStatusLabel.textContent = activeState ? 'روشن' : 'خاموش';
+        alizToggleStatusLabel.textContent = activeState ? i18n.statusOn : i18n.statusOff;
         alizToggleStatusLabel.className = `badge-status-pill ${activeState ? 'badge-status-on' : 'badge-status-off'}`;
       }
       await chrome.storage.sync.set({ globalEnabled: activeState });
@@ -233,6 +398,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     let targetFamily = "'Vazirmatn', 'vazir', sans-serif";
     if (fontId === 'snapp') {
       targetFamily = "'Snapp', 'snapp', sans-serif";
+    } else if (fontId === 'dubai') {
+      targetFamily = "'Dubai', 'dubai', sans-serif";
     } else if (fontId === 'custom_system' && customName) {
       targetFamily = `'${customName}', sans-serif`;
     } else if (fontId === 'vazir') {
@@ -251,7 +418,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   alizApplyPopupUiFont(alizActiveFont, alizCustomFontTitle);
 
   if (alizFontSelect) {
-    if (alizActiveFont === 'custom_system' || (alizActiveFont !== 'vazir' && alizActiveFont !== 'snapp')) {
+    if (alizActiveFont === 'custom_system' || (alizActiveFont !== 'vazir' && alizActiveFont !== 'snapp' && alizActiveFont !== 'dubai')) {
       alizFontSelect.value = 'custom_system';
       if (alizCustomFontContainer) alizCustomFontContainer.style.display = 'block';
       if (alizManualFontField) alizManualFontField.value = alizCustomFontTitle || alizActiveFont;
@@ -282,8 +449,12 @@ document.addEventListener('DOMContentLoaded', async () => {
           selectedFont: 'custom_system',
           customFontName: typedFontName
         });
-        alizSaveFontBtn.textContent = 'ثبت شد!';
-        setTimeout(() => { alizSaveFontBtn.textContent = 'ثبت'; }, 1500);
+        const i18n = ALIZ_I18N[alizCurrentLanguage] || ALIZ_I18N.fa;
+        alizSaveFontBtn.textContent = i18n.customFontSaved;
+        setTimeout(() => {
+          const curI18n = ALIZ_I18N[alizCurrentLanguage] || ALIZ_I18N.fa;
+          alizSaveFontBtn.textContent = curI18n.customFontSubmit;
+        }, 1500);
       }
     });
   }
@@ -343,13 +514,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   function alizRefreshActiveCounter() {
     if (!alizActiveCounterBadge) return;
     const activeCount = Object.values(alizCurrentPlatformStatus).filter(Boolean).length;
-    alizActiveCounterBadge.textContent = `فعال: ${activeCount} / ${ALIZ_SUPPORTED_PLATFORMS.length}`;
+    const i18n = ALIZ_I18N[alizCurrentLanguage] || ALIZ_I18N.fa;
+    alizActiveCounterBadge.textContent = i18n.activeCountBadge(activeCount, ALIZ_SUPPORTED_PLATFORMS.length);
   }
 
   function alizRenderPlatformsList(filterKeyword = '') {
     if (!alizPlatformListContainer) return;
     alizPlatformListContainer.innerHTML = '';
     const cleanedKeyword = filterKeyword.toLowerCase().trim();
+    const i18n = ALIZ_I18N[alizCurrentLanguage] || ALIZ_I18N.fa;
 
     const matchedPlatforms = ALIZ_SUPPORTED_PLATFORMS.filter(p => {
       if (!cleanedKeyword) return true;
@@ -363,7 +536,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       emptyIndicator.style.textAlign = 'center';
       emptyIndicator.style.padding = '18px';
       emptyIndicator.style.color = 'var(--text-muted)';
-      emptyIndicator.textContent = 'سایتی با این عنوان یافت نشد.';
+      emptyIndicator.textContent = i18n.noSitesFound;
       alizPlatformListContainer.appendChild(emptyIndicator);
       return;
     }
@@ -376,7 +549,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       const detailsWrap = document.createElement('div');
       detailsWrap.className = 'site-info clickable';
-      detailsWrap.title = `باز کردن وب‌سایت ${platform.name}`;
+      detailsWrap.title = i18n.openSiteTitle(platform.name);
 
       const iconImg = document.createElement('img');
       iconImg.className = 'site-icon';
@@ -435,17 +608,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  alizRenderPlatformsList();
-
   // Local System Fonts Lookup
   async function alizPopulateLocalSystemFonts() {
+    const i18n = ALIZ_I18N[alizCurrentLanguage] || ALIZ_I18N.fa;
     if ('queryLocalFonts' in window) {
       try {
         const systemFontsList = await window.queryLocalFonts();
         if (systemFontsList && systemFontsList.length > 0 && alizSystemPickerSelect) {
           const distinctFontFamilies = [...new Set(systemFontsList.map(f => f.family))].sort();
 
-          alizSystemPickerSelect.innerHTML = '<option value="">-- انتخاب قلم از سیستم --</option>';
+          alizSystemPickerSelect.innerHTML = `<option value="">${i18n.systemFontsDefault}</option>`;
           distinctFontFamilies.forEach(family => {
             const optElem = document.createElement('option');
             optElem.value = family;
@@ -471,6 +643,138 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (alizSystemPickerWrapper) alizSystemPickerWrapper.style.display = 'none';
     }
   }
+
+  // Language Switcher Controller
+  function alizApplyLanguage(langCode) {
+    const i18n = ALIZ_I18N[langCode] || ALIZ_I18N.fa;
+    alizCurrentLanguage = langCode;
+
+    // 1. Document Direction & Lang
+    document.documentElement.setAttribute('dir', i18n.dir);
+    document.documentElement.setAttribute('lang', i18n.htmlLang);
+
+    // 2. Language Switcher Button Text & Title
+    if (alizLangCodeText) alizLangCodeText.textContent = i18n.langCode;
+    if (alizLangSwitchBtn) alizLangSwitchBtn.title = i18n.langBtnTitle;
+
+    // 3. Header
+    const subtitleEl = document.querySelector('.brand-text .subtitle');
+    if (subtitleEl) subtitleEl.textContent = i18n.subtitle;
+    if (alizOpenDrawerBtn) alizOpenDrawerBtn.title = i18n.gearBtnTitle;
+
+    // 4. Master Activation
+    const actTitle = document.querySelector('.activation-title');
+    if (actTitle) actTitle.textContent = i18n.activationTitle;
+    if (alizToggleStatusLabel) {
+      const isChecked = alizGlobalToggle ? alizGlobalToggle.checked : true;
+      alizToggleStatusLabel.textContent = isChecked ? i18n.statusOn : i18n.statusOff;
+    }
+
+    // 5. Main Tab
+    const mainTabSpan = document.querySelector('.main-tab-item span');
+    if (mainTabSpan) mainTabSpan.textContent = i18n.mainTab;
+
+    // 6. Settings Drawer
+    const drawerTitleSpan = document.querySelector('.drawer-title span');
+    if (drawerTitleSpan) drawerTitleSpan.textContent = i18n.drawerTitle;
+    if (alizCloseDrawerBtn) alizCloseDrawerBtn.title = i18n.drawerCloseTitle;
+
+    const algoLabel = document.querySelector('label[for="algorithmSelect"]');
+    if (algoLabel) algoLabel.textContent = i18n.algoLabel;
+    const badgeSmart = document.querySelector('.form-label-row .badge-accent');
+    if (badgeSmart) badgeSmart.textContent = i18n.badgeSmart;
+
+    if (alizAlgoSelect) {
+      const optAdvFull = alizAlgoSelect.querySelector('option[value="advanced_full"]');
+      if (optAdvFull) optAdvFull.textContent = i18n.algoOptions.advanced_full;
+      const optAdvSec = alizAlgoSelect.querySelector('option[value="advanced_section"]');
+      if (optAdvSec) optAdvSec.textContent = i18n.algoOptions.advanced_section;
+      const optFirstWord = alizAlgoSelect.querySelector('option[value="first_word"]');
+      if (optFirstWord) optFirstWord.textContent = i18n.algoOptions.first_word;
+    }
+
+    const algoHelp = document.querySelector('.drawer-body .help-text');
+    if (algoHelp) algoHelp.textContent = i18n.algoHelp;
+
+    const flipTitle = alizFlipArrowsSwitch ? alizFlipArrowsSwitch.closest('.setting-toggle-row')?.querySelector('.toggle-title') : null;
+    if (flipTitle) flipTitle.textContent = i18n.flipArrowsTitle;
+
+    const applyCodeTitle = alizApplyToCodeSwitch ? alizApplyToCodeSwitch.closest('.setting-toggle-row')?.querySelector('.toggle-title') : null;
+    if (applyCodeTitle) applyCodeTitle.textContent = i18n.applyToCodeTitle;
+
+    document.querySelectorAll('.drawer-body .badge-muted').forEach(badge => {
+      badge.textContent = i18n.badgeBeta;
+    });
+
+    const drawerInfoH = document.querySelector('.drawer-info-header span');
+    if (drawerInfoH) drawerInfoH.textContent = i18n.drawerInfoTitle;
+    const drawerInfoP = document.querySelector('.drawer-info-text');
+    if (drawerInfoP) drawerInfoP.textContent = i18n.drawerInfoText;
+
+    // 7. Font Section
+    const fontCardTitle = document.querySelector('.card:first-of-type .card-title span');
+    if (fontCardTitle) fontCardTitle.textContent = i18n.fontSectionTitle;
+    const fontCardBadge = document.querySelector('.card:first-of-type .card-header .badge-accent');
+    if (fontCardBadge) fontCardBadge.textContent = i18n.badgeActiveFont;
+
+    const fontLabel = document.querySelector('label[for="fontSelect"]');
+    if (fontLabel) fontLabel.textContent = i18n.fontLabel;
+
+    if (alizFontSelect) {
+      const optVazir = alizFontSelect.querySelector('option[value="vazir"]');
+      if (optVazir) optVazir.textContent = i18n.fontOptions.vazir;
+      const optSnapp = alizFontSelect.querySelector('option[value="snapp"]');
+      if (optSnapp) optSnapp.textContent = i18n.fontOptions.snapp;
+      const optDubai = alizFontSelect.querySelector('option[value="dubai"]');
+      if (optDubai) optDubai.textContent = i18n.fontOptions.dubai;
+      const optCustom = alizFontSelect.querySelector('option[value="custom_system"]');
+      if (optCustom) optCustom.textContent = i18n.fontOptions.custom_system;
+    }
+
+    const sysFontLabel = document.querySelector('label[for="systemFontSelect"]');
+    if (sysFontLabel) sysFontLabel.textContent = i18n.systemFontsLabel;
+    const sysDefaultOpt = alizSystemPickerSelect ? alizSystemPickerSelect.querySelector('option[value=""]') : null;
+    if (sysDefaultOpt) sysDefaultOpt.textContent = i18n.systemFontsDefault;
+
+    const manualFontLabel = document.querySelector('label[for="customFontInput"]');
+    if (manualFontLabel) manualFontLabel.textContent = i18n.manualFontLabel;
+    if (alizManualFontField) alizManualFontField.placeholder = i18n.customFontPlaceholder;
+    if (alizSaveFontBtn && alizSaveFontBtn.textContent !== i18n.customFontSaved) {
+      alizSaveFontBtn.textContent = i18n.customFontSubmit;
+    }
+
+    const fontSizeLabel = document.querySelector('.slider-label-text');
+    if (fontSizeLabel) fontSizeLabel.textContent = i18n.fontSizeLabel;
+    if (alizResetFontSizeBtn) alizResetFontSizeBtn.title = i18n.resetFontSizeTitle;
+
+    // 8. Services Section
+    const servCardTitle = document.querySelector('.card:nth-of-type(2) .card-title span');
+    if (servCardTitle) servCardTitle.textContent = i18n.servicesSectionTitle;
+    if (alizSearchField) alizSearchField.placeholder = i18n.searchPlaceholder;
+
+    // Theme title update
+    const currentTheme = ALIZ_COLOR_THEMES[alizCurrentThemeIndex];
+    if (alizThemeSwitchBtn && currentTheme) {
+      alizThemeSwitchBtn.title = i18n.themeBtnTitle(currentTheme.title);
+    }
+
+    // Refresh active counter & list titles
+    alizRefreshActiveCounter();
+    alizRenderPlatformsList(alizSearchField ? alizSearchField.value : '');
+  }
+
+  // Language Switch Button Click Handler (Cycle fa -> ar -> en)
+  if (alizLangSwitchBtn) {
+    alizLangSwitchBtn.addEventListener('click', async () => {
+      const currentIndex = ALIZ_LANG_CYCLE.indexOf(alizCurrentLanguage);
+      const nextLang = ALIZ_LANG_CYCLE[(currentIndex + 1) % ALIZ_LANG_CYCLE.length];
+      alizApplyLanguage(nextLang);
+      await chrome.storage.sync.set({ uiLang: nextLang });
+    });
+  }
+
+  // Apply initial language from storage
+  alizApplyLanguage(alizCurrentLanguage);
 
   // Developer Profile Link Handler
   const alizDevProfileLink = document.querySelector('.dev-link');

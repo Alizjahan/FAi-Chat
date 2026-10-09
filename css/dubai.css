@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Dubai';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/dubai/DUBAI-LIGHT.TTF') format('truetype');
+}
+
+@font-face {
+	font-family: 'Dubai';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/dubai/DUBAI-REGULAR.TTF') format('truetype');
+}
+
+@font-face {
+	font-family: 'Dubai';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/dubai/DUBAI-MEDIUM.TTF') format('truetype');
+}
+
+@font-face {
+	font-family: 'Dubai';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/dubai/DUBAI-BOLD.TTF') format('truetype');
+}
+
+@font-face {
+	font-family: 'dubai';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/dubai/DUBAI-REGULAR.TTF') format('truetype');
+}

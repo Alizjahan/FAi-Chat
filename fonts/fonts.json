@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": {
     "id": "faliz-rtl",
-    "name": "FAi-Chat RTL",
+    "name": "FAi-Chat-bot-RTL-Persian-Arabic",
     "nameFa": "راست‌چین هوش مصنوعی"
   },
   "defaultFont": "vazir",
@@ -35,6 +35,32 @@
           "path": "snapp/SnappWeb2.0-Regular.woff",
           "weight": "normal",
           "sha256": "8a501efe9cecb3c27e75aa81b1d5adbe2462d9b9c119256221dbdbb0e2bbb62b"
+        }
+      ]
+    },
+    {
+      "id": "dubai",
+      "title": "دبی (Dubai)",
+      "family": "Dubai",
+      "version": "1.0",
+      "license": "Custom",
+      "selectable": true,
+      "files": [
+        {
+          "path": "dubai/DUBAI-REGULAR.TTF",
+          "weight": "normal"
+        },
+        {
+          "path": "dubai/DUBAI-BOLD.TTF",
+          "weight": "bold"
+        },
+        {
+          "path": "dubai/DUBAI-MEDIUM.TTF",
+          "weight": "500"
+        },
+        {
+          "path": "dubai/DUBAI-LIGHT.TTF",
+          "weight": "300"
         }
       ]
     }

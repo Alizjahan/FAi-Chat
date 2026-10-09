@@ -2,10 +2,11 @@
 <html dir="rtl" lang="fa">
 <head>
   <meta charset="utf-8">
-  <title>FAi-Chat - راست‌چین چت‌بات هوش مصنوعی</title>
+  <title>FAi-Chat-bot-RTL-Persian-Arabic</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/vazir.css">
   <link rel="stylesheet" href="css/snapp.css">
+  <link rel="stylesheet" href="css/dubai.css">
   <link rel="stylesheet" href="css/fontiran-iranyekan.css">
   <link rel="stylesheet" href="popup.css">
 </head>
@@ -22,8 +23,18 @@
         </div>
       </div>
 
-      <!-- Right Actions: Theme Icon + Gear Icon -->
+      <!-- Right Actions: Language Switcher + Theme Icon + Gear Icon -->
       <div class="header-actions-right">
+        <!-- Language Switcher Button (FA / AR / EN) -->
+        <button type="button" class="lang-switch-btn" id="langSwitchBtn" title="تغییر زبان / تغيير اللغة / Change Language">
+          <span class="lang-code-text" id="langCodeText">FA</span>
+          <svg class="lang-globe-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </button>
+
         <button type="button" class="icon-btn theme-cycle-btn" id="themeCycleBtn" title="تغییر تم (روشن / تاریک / آنتی‌گرویتی)">
           <!-- SVG rendered dynamically by popup.js -->
         </button>
@@ -157,6 +168,7 @@
               <select id="fontSelect" class="select-input">
                 <option value="vazir" selected>وزیرمتن (پیش‌فرض)</option>
                 <option value="snapp">اسنپ (Snapp)</option>
+                <option value="dubai">دبی (Dubai)</option>
                 <option value="custom_system">فونت دلخواه از سیستم...</option>
               </select>
             </div>

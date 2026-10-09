@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="header.jpg" alt="FAi-Chat Header" width="100%">
+  <img src="header.jpg" alt="FAi-Chat-bot-RTL-Persian-Arabic Header" width="100%">
 </p>
 
 <p align="center">
-  <strong>Smart RTL Direction & Persian Typography for AI Chatbots</strong>
+  <strong>Smart RTL Direction, Multilingual Interface (Persian, Arabic, English) & Typography for AI Chatbots</strong>
 </p>
 
 <p align="center">
   <a href="https://github.com/Alizjahan/FAi-Chat"><img src="https://img.shields.io/badge/Manifest-V3-0D9DF8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Manifest V3"></a>
-  <a href="https://github.com/Alizjahan/FAi-Chat"><img src="https://img.shields.io/badge/Version-1.0.0-34C6BF?style=for-the-badge" alt="Version 1.0.0"></a>
+  <a href="https://github.com/Alizjahan/FAi-Chat"><img src="https://img.shields.io/badge/Version-1.1.0-34C6BF?style=for-the-badge" alt="Version 1.1.0"></a>
   <a href="https://github.com/Alizjahan/FAi-Chat/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-89DB76?style=for-the-badge" alt="License"></a>
   <a href="https://github.com/Alizjahan"><img src="https://img.shields.io/badge/Author-Alizjahan-0F6FFA?style=for-the-badge&logo=github&logoColor=white" alt="Author"></a>
 </p>
@@ -17,26 +17,28 @@
 
 ## Overview
 
-FAi-Chat is a browser extension built on Chrome Manifest V3, designed to provide right-to-left (RTL) text layout, bidirectional text processing, and Persian typography for modern AI conversational platforms and LLM interfaces.
+FAi-Chat-bot-RTL-Persian-Arabic is a modern browser extension built on Chrome Manifest V3, engineered to deliver intelligent right-to-left (RTL) text layout, bidirectional sentence processing, and Persian & Arabic typography across all leading AI conversational platforms and LLM interfaces.
 
-By combining mutation-driven DOM observation with font rendering pipelines, FAi-Chat resolves mixed-language rendering issues without affecting code blocks, math formulas, or markdown structural formatting.
+Equipped with a built-in trilingual UI switcher (Persian, Arabic, and English), native font support for Dubai, Vazirmatn, and Snapp, and mutation-driven DOM observation, the extension ensures flawless mixed-language rendering without interfering with code blocks, math formulas, or markdown structures.
 
 ---
 
 ## Key Highlights
 
+- **Trilingual Interface**: Instant one-click language switching between Persian (فارسی), Arabic (العربية), and English with automatic layout adaptation (RTL/LTR).
+- **Arabic & Persian Typography**: Native embedded web fonts including **Dubai** (for Arabic and Persian users), **Vazirmatn**, and **Snapp**, alongside full support for local system fonts.
 - **Dynamic Direction Detection**: Real-time analysis of streaming AI responses with automated direction assignment based on linguistic composition.
 - **Syntactic Code Isolation**: Code snippets, terminal blocks, preformatted tags, and LaTeX notation remain strictly left-to-right (LTR) with intact indentation.
-- **Persian Typography Support**: Integrated web font families including Vazirmatn and Snapp, with fallback capability for local system-installed typefaces.
 - **Per-Platform Granular Toggles**: Granular activation controls covering more than 50 artificial intelligence interfaces and developer workbenches.
-- **Modern User Interface**: Native popup console supporting dynamic dark, light, and Antigravity color palettes with instantaneous font resizing (px).
+- **Pixel-Accurate Font Resizing**: Custom slider for live font scaling from 12px to 24px with one-click default reset.
+- **Modern User Interface**: Native popup console supporting dynamic dark, light, and Antigravity color palettes.
 - **Zero External Telemetry**: Offline-first architecture operating exclusively within client-side permissions without external tracking endpoints.
 
 ---
 
 ## Supported Platforms
 
-FAi-Chat provides tailored compatibility rules and CSS bindings for major AI platforms, including:
+FAi-Chat-bot-RTL-Persian-Arabic provides tailored compatibility rules and CSS bindings for major AI platforms, including:
 
 | Category | Platforms |
 | :--- | :--- |
@@ -49,11 +51,11 @@ FAi-Chat provides tailored compatibility rules and CSS bindings for major AI pla
 ## Architecture & Technical Stack
 
 ```
-FAi-Chat/
+FAi-Chat-bot-RTL-Persian-Arabic/
 ├── manifest.json              # Chrome Manifest V3 configuration
 ├── index.html                 # Extension popup interface
 ├── popup.css                  # UI layout and thematic token styles
-├── popup.js                   # Client state management & messaging controller
+├── popup.js                   # Client state management, i18n & messaging controller
 ├── style.css                  # Global injected stylesheet for RTL & Typography
 ├── js/
 │   ├── background.js          # Service worker lifecycle & tabs broadcasting
@@ -63,9 +65,11 @@ FAi-Chat/
 ├── css/
 │   ├── vazir.css              # Vazirmatn font-face definitions
 │   ├── snapp.css              # Snapp font-face definitions
+│   ├── dubai.css              # Dubai font-face definitions
 │   └── fontiran-iranyekan.css # IranYekan definitions
 ├── fonts/                     # Bundled web fonts and font registry metadata
 │   ├── fonts.json
+│   ├── dubai/                 # Dubai Regular, Bold, Medium, Light
 │   ├── snapp/
 │   └── vazir/
 └── images/                    # Extension and supported platform icons
@@ -87,7 +91,7 @@ FAi-Chat/
    ```
 3. Enable **Developer mode** in the top right corner.
 4. Click on **Load unpacked** in the top left toolbar.
-5. Select the project directory (`FAi-Chat`).
+5. Select the project directory (`Persian_RTL_new_ui`).
 6. The extension is now loaded and available via the browser extensions menu.
 
 ---
@@ -97,7 +101,8 @@ FAi-Chat/
 Settings are synchronized across browser sessions using `chrome.storage.sync`. Key configuration fields include:
 
 - `globalEnabled` *(boolean)*: Global extension activation toggle.
-- `selectedFont` *(string)*: Active typeface identifier (`vazir`, `snapp`, `custom_system`).
+- `uiLang` *(string)*: Active user interface language (`fa`, `ar`, `en`).
+- `selectedFont` *(string)*: Active typeface identifier (`vazir`, `snapp`, `dubai`, `custom_system`).
 - `customFontName` *(string)*: Name of the local system font when custom mode is selected.
 - `fontScale` / `fontScalePx` *(number)*: Font size scale in pixels (range: 12px – 24px).
 - `rtlAlgorithmMode` *(string)*: Text analysis mode (`advanced_full`, `advanced_section`, `first_word`).
@@ -110,6 +115,7 @@ Settings are synchronized across browser sessions using `chrome.storage.sync`. K
 
 | Version | Release Milestone | Details |
 | :--- | :--- | :--- |
+| **v1.1.0** | Trilingual & Arabic Font Release | Added trilingual UI switcher (Persian, Arabic, English), integrated Dubai font family, improved RTL/LTR adaptive styles. |
 | **v1.0.0** | Stable Production Release | Clean UI overhaul, pixel-based font scale, Snapp & Vazirmatn integration, 54 platform mappings. |
 | **v0.8.0** | Comprehensive Platform Expansion | Expanded site coverage (NotebookLM, Lovable, Grok, Kimi), live font preview pipeline. |
 | **v0.5.0** | Bidirectional Text Algorithm | Integrated advanced sentence-level mixed language analyzer and arrow mirror mechanism. |

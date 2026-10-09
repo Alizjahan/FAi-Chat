@@ -109,8 +109,34 @@ body {
   font-size: 13px;
   line-height: 1.5;
   user-select: none;
-  direction: rtl;
+  direction: inherit;
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+html[dir="ltr"] body {
+  direction: ltr;
+}
+
+html[dir="ltr"] .settings-drawer {
+  direction: ltr;
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+  transform: translateX(100%);
+  box-shadow: -6px 0 24px rgba(0, 0, 0, 0.45);
+}
+
+html[dir="ltr"] .settings-drawer.open {
+  transform: translateX(0);
+}
+
+html[dir="ltr"] .brand-text .subtitle {
+  text-align: left;
 }
 
 .popup-container {
@@ -279,6 +305,66 @@ body[data-theme="antigravity"] .icon-btn.active {
 body[data-theme="antigravity"] .theme-cycle-btn {
   border-color: rgba(52, 198, 191, 0.4);
   color: #34C6BF;
+}
+
+/* Language Switcher Button (Matching user screenshot) */
+.lang-switch-btn {
+  background: var(--bg-primary);
+  border: 1.5px solid rgba(52, 198, 191, 0.55);
+  outline: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 3px 9px;
+  height: 28px;
+  border-radius: 9px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 8px rgba(52, 198, 191, 0.15);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.lang-switch-btn:hover {
+  border-color: #34C6BF;
+  box-shadow: 0 0 12px rgba(52, 198, 191, 0.35);
+  transform: translateY(-1px);
+}
+
+.lang-switch-btn .lang-code-text {
+  font-weight: 800;
+  color: #f0f6fc;
+  line-height: 1;
+}
+
+body[data-theme="antigravity"] .lang-switch-btn .lang-code-text {
+  background: linear-gradient(120deg, #0D9DF8 0%, #34C6BF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body[data-theme="light"] .lang-switch-btn {
+  border-color: rgba(15, 111, 250, 0.45);
+  box-shadow: 0 0 6px rgba(15, 111, 250, 0.12);
+}
+
+body[data-theme="light"] .lang-switch-btn .lang-code-text {
+  color: #0F6FFA;
+}
+
+.lang-switch-btn .lang-globe-icon {
+  color: var(--text-primary);
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+body[data-theme="light"] .lang-switch-btn .lang-globe-icon {
+  color: #0F6FFA;
 }
 
 /* --------------------------------------------------------------------------
